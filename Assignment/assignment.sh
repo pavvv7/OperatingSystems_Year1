@@ -12,6 +12,7 @@ do
   echo "4: Display command history"
   echo "5: Backup Files"
   echo "6: Exit"
+  echo -n "Please enter your option: "
 
   #reads in input from the user
   read input
@@ -26,7 +27,7 @@ do
     
     4) echo "Your command history is:"; echo $history ;echo ;; #will show command history
     
-    5) echo "Enter your directory you want to backup in format /your/directory/here: "; read directory; mkdir ~/BackupFolder;cd $directory; cp -r $directory ~/BackupFolder; ls -a ;echo;;
+    5) echo "Enter your directory you want to backup in format /your/directory/here: "; read directory; mkdir /workspaces/OperatingSystems_Year1/BackupFolder;cd $directory; cp -r $directory /workspaces/OperatingSystems_Year1/BackupFolder; ls -a ;echo;;
        #will recursively backup files from a specified directory and all its sub-directories (the user should type in the name of the directory), 
        #to a newly created directory called BackupFolder; and then list the contents of this directory
        
